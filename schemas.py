@@ -26,3 +26,11 @@ class ApplePayCSV(BaseModel):
 
     class Config:
         allow_population_by_field_name = True
+
+class Merchant(BaseModel):
+    merchant: str
+    month: str
+    amount: float
+
+    class Config:
+        orm_mode = True
