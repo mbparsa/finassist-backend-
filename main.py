@@ -12,7 +12,7 @@ import base64
 from collections import defaultdict
 import re
 import pandas as pd
-from merchant import merchant_month
+from merchant_month import merchant
 import json
 
 import re
@@ -217,9 +217,9 @@ async def upload_apple_csv(apple_pay_csv: List[schemas.ApplePayRecord]):
   
     # set the data to the merchant_month class
     print(filtered_aggregated_spending)
-    merchant_records =  merchant_month()
-    merchant_records.set_Df(filtered_aggregated_spending)
-    print(merchant_month().get_Df())
+    merchant_records =  merchant()
+    merchant_records.set_merchant(filtered_aggregated_spending)
+    print(merchant().get_merchant())
     return JSONResponse(content={"message": "Data processed successfully"})
 
 

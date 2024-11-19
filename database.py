@@ -8,6 +8,7 @@ user_name = os.environ.get('DB_USERNAME')
 password = os.environ.get('DB_PASSWORD')
 
 print(user_name)
+
 DATABASE_URL = f"postgresql://{user_name}:{password}!@localhost/finassist"
 print(DATABASE_URL)
 

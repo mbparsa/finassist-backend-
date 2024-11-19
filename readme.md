@@ -16,6 +16,10 @@ python3 -m venv venv
 # Activate the virtual environment
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+# install required packages
+pip install -r requirements.txt
+
+
 # Install FastAPI, Uvicorn, and SQLAlchemy
 pip install fastapi uvicorn sqlalchemy psycopg2-binary
 ```
